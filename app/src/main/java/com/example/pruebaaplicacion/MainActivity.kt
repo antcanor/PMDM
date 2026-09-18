@@ -1,6 +1,7 @@
 package com.example.pruebaaplicacion
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -17,8 +18,14 @@ import androidx.compose.ui.unit.dp
 import com.example.pruebaaplicacion.ui.theme.PruebaAplicacionTheme
 
 class MainActivity : ComponentActivity() {
+
+    //TAG para el log de error
+    private val TAG = "EspejoGaladriel"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //Se añade el mensaje de error
+        Log.e(TAG, "Un Anillo para gobernarlos a todos")
         enableEdgeToEdge()
         setContent {
             PruebaAplicacionTheme {
@@ -37,7 +44,7 @@ class MainActivity : ComponentActivity() {
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Surface(color = Color.Cyan){
         Text(
-            text = "Hola mi nombre es  $name!",
+            text = "Hola mi nombre es $name!",
             modifier = modifier.padding(all = 24.dp)
         )
     }
