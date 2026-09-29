@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">UT3-LAB2</string>
+    <string-array name="razas_tierra_media">
+        <item>Elfo</item>
+        <item>Enano</item>
+        <item>Humano</item>
+        <item>Hobbit</item>
+    </string-array>
+</resources>
