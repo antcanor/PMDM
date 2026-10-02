@@ -21,13 +21,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etIdentificador"
-        app:layout_constraintBottom_toTopOf="@id/spinnerRaza"
+        app:layout_constraintBottom_toTopOf="@id/tipoUnidad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvInicio" />
 
     <Spinner
-        android:id="@+id/spinnerRaza"
+        android:id="@+id/tipoUnidad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/tipo_unidad"
@@ -43,7 +43,7 @@
         app:layout_constraintBottom_toTopOf="@id/Antorcha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinnerRaza" >
+        app:layout_constraintTop_toBottomOf="@id/tipoUnidad" >
 
         <RadioButton
             android:id="@+id/rbArmadura"
@@ -63,7 +63,7 @@
         android:id="@+id/Antorcha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="levar Antorcha de Polvorín"
+        android:text="Llevar Antorcha de Polvorín"
         app:layout_constraintBottom_toTopOf="@id/btnRegistro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
