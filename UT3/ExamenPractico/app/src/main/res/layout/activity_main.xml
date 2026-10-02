@@ -8,12 +8,81 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvInicio"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Identificador del Uruk-hai"
+        app:layout_constraintBottom_toTopOf="@id/etIdentificador"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etIdentificador"
+        app:layout_constraintBottom_toTopOf="@id/spinnerRaza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvInicio" />
+
+    <Spinner
+        android:id="@+id/spinnerRaza"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/tipo_unidad"
+        app:layout_constraintBottom_toTopOf="@id/Escudos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etIdentificador"  />
+
+    <RadioGroup
+        android:id="@+id/Escudos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/Antorcha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerRaza" >
+
+        <RadioButton
+            android:id="@+id/rbArmadura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Armadura de Hierro"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rbEscudo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Escudo de Isengard" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/Antorcha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="levar Antorcha de Polvorín"
+        app:layout_constraintBottom_toTopOf="@id/btnRegistro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Escudos" />
+
+    <ImageButton
+        android:id="@+id/btnRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Realizar el envío de la tropa"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_menu_send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Antorcha" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

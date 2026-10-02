@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">El Despertar de Isengard</string>
+    <string-array name="tipo_unidad">
+        <item>Guerrero</item>
+        <item>Arquero</item>
+        <item>Explorador</item>
+        <item>Berserker</item>
+    </string-array>
 </resources>
