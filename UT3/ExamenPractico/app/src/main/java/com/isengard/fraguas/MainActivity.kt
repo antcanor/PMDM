@@ -17,6 +17,12 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     private val TAG = "FraguasIsengard"
+
+    lateinit var identificador : EditText
+    lateinit var tipoUnidad : Spinner
+    lateinit var Escudos : RadioGroup
+    lateinit var Antorcha: CheckBox
+    lateinit var btnRegistro: ImageButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -27,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val identificador = findViewById<EditText>(R.id.etIdentificador)
+        identificador = findViewById<EditText>(R.id.etIdentificador)
         identificador.requestFocus()
         identificador.setOnFocusChangeListener { view, hasFocus ->
             if (!hasFocus) {
@@ -36,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val tipoUnidad = findViewById<Spinner>(R.id.tipoUnidad)
+        tipoUnidad = findViewById<Spinner>(R.id.tipoUnidad)
         tipoUnidad.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 val unidadSeleccionada = parent?.getItemAtPosition(position).toString()
@@ -45,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
 
-        val Escudos = findViewById<RadioGroup>(R.id.Escudos)
+        Escudos = findViewById<RadioGroup>(R.id.Escudos)
         Escudos.setOnCheckedChangeListener { group, checkedId ->
             when (checkedId) {
                 R.id.rbEscudo -> Toast.makeText(this, "¡Se ha elegido Escudo!", Toast.LENGTH_SHORT).show()
@@ -53,13 +59,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val Antorcha = findViewById<CheckBox>(R.id.Antorcha)
+        Antorcha = findViewById<CheckBox>(R.id.Antorcha)
         Antorcha.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) Log.d("Soldado", "Has seleccionado la Antorcha de Polvorín.")
         }
 
 
-        val btnRegistro = findViewById<ImageButton>(R.id.btnRegistro)
+        btnRegistro = findViewById<ImageButton>(R.id.btnRegistro)
 
         btnRegistro.setOnClickListener {
             //Extraemos los datos
@@ -83,6 +89,17 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putString("key_identificador",identificador.text.toString())
+        outState.putInt("key_tipo_unidad", tipoUnidad.selectedItemPosition)
+        outState.putInt("key_escudo", Escudos.checkedRadioButtonId)
+        outState.putBoolean("key_antorcha", Antorcha.isChecked)
+
+        Log.d(TAG, "onSaveInstanceState(): Guardando el progreso de creación del Uruk-hai.")
+
+        super.onSaveInstanceState(outState)
     }
 
     override fun onStart() {
