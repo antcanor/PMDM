@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Middle-earth Map</string>
+
+    <string name="titulo">Select a region</string>
+    <string name="anillo">The One Ring</string>
+
+    <string name="gondor">Gondor</string>
+    <string name="rohan">Rohan</string>
+    <string name="mordor">Mordor</string>
+
+    <string name="seleccionar">Select region</string>
+</resources>

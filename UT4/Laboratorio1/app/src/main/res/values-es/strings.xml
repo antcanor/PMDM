@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">El Mapamundi Multilingüe de la Tierra Media</string>
+
+    <string name="titulo">Selecciona una región</string>
+    <string name="anillo">El Anillo Único</string>
+
+    <string name="gondor">Gondor</string>
+    <string name="rohan">Rohan</string>
+    <string name="mordor">Mordor</string>
+
+    <string name="seleccionar">Seleccionar región</string>
+
+</resources>

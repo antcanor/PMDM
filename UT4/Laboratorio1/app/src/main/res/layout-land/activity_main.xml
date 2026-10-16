@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="402dp" />
+
+    <!-- COLUMNA IZQUIERDA -->
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:id="@+id/ivAnillo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/anillo"
+        android:contentDescription="@string/anillo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline" />
+
+    <ImageView
+        android:id="@+id/ivGondor"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/gondor"
+        android:contentDescription="@string/gondor"
+        app:layout_constraintCircle="@id/ivAnillo"
+        app:layout_constraintCircleRadius="110dp"
+        app:layout_constraintCircleAngle="0" />
+
+    <ImageView
+        android:id="@+id/ivRohan"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/rohan"
+        android:contentDescription="@string/rohan"
+        app:layout_constraintCircle="@id/ivAnillo"
+        app:layout_constraintCircleRadius="110dp"
+        app:layout_constraintCircleAngle="120" />
+
+    <ImageView
+        android:id="@+id/ivMordor"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/mordor"
+        android:contentDescription="@string/mordor"
+        app:layout_constraintCircle="@id/ivAnillo"
+        app:layout_constraintCircleRadius="110dp"
+        app:layout_constraintCircleAngle="240" />
+
+    <!-- COLUMNA DERECHA -->
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="32dp" />
+
+    <Button
+        android:id="@+id/btnSeleccionar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/seleccionar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
