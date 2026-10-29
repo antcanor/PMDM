@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#1E1E1E"
+    tools:context=".MainActivity">
+
+    <TextView
+            android:id="@+id/tvMenuUT6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2627 - IAX - Prg. MDM\nUT6: Gestión Multimedia"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btnIrAudio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+    <!-- Botón de la Práctica 1 (Activo) -->
+    <Button
+            android:id="@+id/btnIrAudio"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Práctica: El Laúd de Finrod"
+            android:backgroundTint="#8E44AD"
+            app:layout_constraintTop_toBottomOf="@id/tvMenuUT6"
+            app:layout_constraintBottom_toTopOf="@id/btnIrCampanas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botón del Laboratorio (Desactivado visualmente para evitar crasheos) -->
+    <Button
+            android:id="@+id/btnIrCampanas"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Laboratorio: Alarma de Gondor"
+            android:backgroundTint="#7F8C8D"
+            app:layout_constraintTop_toBottomOf="@id/btnIrAudio"
+            app:layout_constraintBottom_toTopOf="@id/btnIrVideo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+            android:id="@+id/btnIrVideo"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Video"
+            android:backgroundTint="#7F8C8D"
+            app:layout_constraintTop_toBottomOf="@id/btnIrCampanas"
+            app:layout_constraintBottom_toTopOf="@id/btnIrVideoWeb"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+            android:id="@+id/btnIrVideoWeb"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Web View"
+            android:backgroundTint="#7F8C8D"
+            app:layout_constraintTop_toBottomOf="@id/btnIrVideo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
