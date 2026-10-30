@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="#7561"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Puesto de Transmisión:"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+    <Spinner
+            android:id="@+id/spinnerCanales"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#7561"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"/>
+
+    <androidx.media3.ui.PlayerView
+            android:id="@+id/playerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#000000"
+            app:use_controller="true"
+            app:show_timeout="5000"/>
+
+    <TextView
+            android:id="@+id/txtEstadoConexion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Seleccione un canal..."
+            android:textColor="#00E5FF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+</LinearLayout>
