@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:background="#0F0F14"
+        android:gravity="center_horizontal">
+
+    <!-- Título de la Consola -->
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📜 ARCHIVO DE LA CIUDADELA"
+            android:textColor="#FAB1A0"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"/>
+
+    <!-- Entrada del nombre del archivo (Pergamino) -->
+    <EditText
+            android:id="@+id/etNombreArchivo"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Nombre del pergamino (ej: cronica.txt)"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#55555A"
+            android:backgroundTint="#E17055"
+            android:inputType="text"
+            android:layout_marginBottom="16dp"/>
+
+    <!-- Contenido libre del pergamino informativo -->
+    <EditText
+            android:id="@+id/etContenidoFichero"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:hint="Escribe las novedades del puesto de avanzada aquí..."
+            android:textColor="#FFFFFF"
+            android:textColorHint="#55555A"
+            android:backgroundTint="#E17055"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:layout_marginBottom="24dp"/>
+
+    <!-- Grupo de control interactivo de botones -->
+    <Button
+            android:id="@+id/btnEscribirFichero"
+            android:layout_width="260dp"
+            android:layout_height="54dp"
+            android:text="Sellar y Guardar Pergamino"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#E17055"
+            android:layout_marginBottom="16dp"/>
+
+    <Button
+            android:id="@+id/btnLeerFichero"
+            android:layout_width="260dp"
+            android:layout_height="54dp"
+            android:text="Desenrollar y Leer Pergamino"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#34495E"/>
+
+</LinearLayout>

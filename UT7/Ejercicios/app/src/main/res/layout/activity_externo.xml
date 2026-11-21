@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:background="#0F0F14"
+        android:gravity="center_horizontal">
+    <!-- Título de la Práctica -->
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌍 MAPA DE FRONTERAS (MEMORIA EXTERNA)"
+            android:textColor="#55E6C1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"/>
+
+    <!-- Entrada para el nombre del plano cartográfico -->
+    <EditText
+            android:id="@+id/etNombreMapa"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="ID del Sector (ej: mapa_este.txt)"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#55555A"
+            android:backgroundTint="#55E6C1"
+            android:inputType="text"
+            android:layout_marginBottom="16dp"/>
+
+    <!-- Entrada del informe de coordenadas de las fronteras -->
+    <EditText
+            android:id="@+id/etCoordenadasMapa"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="Anota los movimientos de tropas y coordenadas..."
+            android:textColor="#FFFFFF"
+            android:textColorHint="#55555A"
+            android:backgroundTint="#55E6C1"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="24dp"/>
+
+    <!-- Panel de control de acciones -->
+    <Button
+            android:id="@+id/btnEscribirExterno"
+            android:layout_width="260dp"
+            android:layout_height="54dp"
+            android:text="Trazar y Guardar Mapa"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#55E6C1"
+            android:layout_marginBottom="16dp"/>
+
+    <Button
+            android:id="@+id/btnLeerExterno"
+            android:layout_width="260dp"
+            android:layout_height="54dp"
+            android:text="Consultar Mapa de Campaña"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#34495E"/>
+
+</LinearLayout>
