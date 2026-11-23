@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:background="#0F0F14"
+        android:gravity="center_horizontal">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🏰 ARCHIVO DE LA CIUDADELA BLANCA"
+            android:textColor="#FAB1A0"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+    <!-- Indicador dinámico del estado del medio externo -->
+    <TextView
+            android:id="@+id/tvEstadoMedio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="#B2BEC3"
+            android:layout_marginBottom="24dp"/>
+
+    <!-- Nombre del pergamino -->
+    <EditText
+            android:id="@+id/etNombrePergamino"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Nombre del pergamino (ej: cronica.txt)"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#55555A"
+            android:backgroundTint="#E17055"
+            android:inputType="text"
+            android:layout_marginBottom="16dp"/>
+
+    <!-- Contenido del informe -->
+    <EditText
+            android:id="@+id/etContenido"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:hint="Redacta la crónica o el parte de exploración..."
+            android:textColor="#FFFFFF"
+            android:textColorHint="#55555A"
+            android:backgroundTint="#E17055"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:layout_marginBottom="24dp"/>
+
+    <!-- Selector de destino -->
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Destino del pergamino"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+            android:id="@+id/rgDestino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+        <RadioButton
+                android:id="@+id/rbInterno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="🔒 Confidencial — Bóveda interna"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#E17055"/>
+
+        <RadioButton
+                android:id="@+id/rbExterno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🗺️ Mapa de campaña — Memoria externa"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#55E6C1"/>
+    </RadioGroup>
+
+    <!-- Acciones -->
+    <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="260dp"
+            android:layout_height="54dp"
+            android:text="Sellar y Guardar"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#E17055"
+            android:layout_marginBottom="16dp"/>
+
+    <Button
+            android:id="@+id/btnLeer"
+            android:layout_width="260dp"
+            android:layout_height="54dp"
+            android:text="Desenrollar y Leer"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#34495E"/>
+
+</LinearLayout>
